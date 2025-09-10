@@ -1,0 +1,136 @@
+<!-- File: help.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Help Center · ICS2 ENS Builder for Google Sheets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Help Center for ICS2 ENS Builder for Google Sheets — setup, permissions, troubleshooting, and FAQs." />
+  <link rel="canonical" href="https://your-domain.example/help" />
+  <meta property="og:title" content="Help Center · ICS2 ENS Builder" />
+  <meta property="og:description" content="Setup, permissions, troubleshooting, and FAQs." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root { --fg:#111; --muted:#555; --brand:#0B57D0; --bg:#fff; --card:#fafafa; }
+    * { box-sizing: border-box }
+    body { margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--fg); background:var(--bg) }
+    header { padding: 48px 20px; background:linear-gradient(180deg,#eef4ff,transparent) }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px }
+    h1 { margin: 0 0 8px; font-size: 32px }
+    h2 { margin: 32px 0 12px; font-size: 22px }
+    h3 { margin: 20px 0 8px; font-size: 18px }
+    p, li { color: var(--fg) }
+    .muted { color: var(--muted) }
+    .card { background: var(--card); border: 1px solid #eee; border-radius: 12px; padding: 16px 18px; }
+    .kbd { font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#f2f2f2; padding:2px 6px; border-radius:6px; border:1px solid #e5e5e5 }
+    .grid { display:grid; gap:16px }
+    @media(min-width:900px){ .grid.cols-2{ grid-template-columns:1fr 1fr } }
+    a { color: var(--brand); text-decoration: none }
+    a:hover { text-decoration: underline }
+    footer { border-top:1px solid #eee; margin-top:40px; padding:20px; color:var(--muted) }
+    .toc a{display:block;padding:6px 0}
+    .badge {display:inline-block;padding:2px 8px;border-radius:999px;background:#eaf2ff;color:#174ea6;font-size:12px}
+    code { background:#f6f8fa; padding:2px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Help Center</h1>
+      <p class="muted">ICS2 ENS Builder for Google Sheets</p>
+      <p><span class="badge">Last updated: 2025-09-10</span></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid cols-2">
+      <nav class="card toc" aria-label="Table of contents">
+        <h3>On this page</h3>
+        <a href="#getting-started">Getting started</a>
+        <a href="#permissions">Permissions explained</a>
+        <a href="#using-the-addon">Using the add-on</a>
+        <a href="#faq">FAQ</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#contact">Contact support</a>
+      </nav>
+
+      <section class="card" id="getting-started">
+        <h2>Getting started</h2>
+        <ol>
+          <li>Install the add-on from Google Workspace Marketplace.</li>
+          <li>Open any Google Sheet. Click the right-side <strong>Puzzle</strong> icon → <em>ICS2 ENS Builder</em>.</li>
+          <li>If prompted, grant permissions (see “Permissions explained”).</li>
+          <li>Click <strong>Create Template</strong> to generate <code>Header</code>, <code>Parties</code>, <code>GoodsItems</code>, <code>CodeLists</code> sheets.</li>
+        </ol>
+      </section>
+    </div>
+
+    <section class="card" id="permissions">
+      <h2>Permissions explained</h2>
+      <ul>
+        <li><code>spreadsheets.currentonly</code> – Read/write the current spreadsheet to validate and export.</li>
+        <li><code>drive.file</code> – Create CSV/XML export files in your Drive that this add-on generates.</li>
+        <li><code>script.container.ui</code> – Render the sidebar UI inside Google Sheets.</li>
+        <li><code>script.locale</code> (optional) – Localize the UI to your language.</li>
+      </ul>
+      <p class="muted">We do not transmit your shipment data to our servers; exports are saved to your Google Drive under your account.</p>
+    </section>
+
+    <section class="card" id="using-the-addon">
+      <h2>Using the add-on</h2>
+      <h3>1) Create the template</h3>
+      <p>Click <strong>Create Template</strong>. You will see four sheets prefilled with example rows.</p>
+
+      <h3>2) Validate</h3>
+      <p>Click <strong>Validate</strong> to run checks such as EORI format, HS≥6 digits, ISO country codes, basic UN/LOCODE hints, description quality, and mass/package counts.</p>
+
+      <h3>3) Export</h3>
+      <ul>
+        <li><strong>Export CSV</strong> – A human-readable CSV grouped by sheet.</li>
+        <li><strong>Export XML</strong> – Pretty-printed IE315-style XML for downstream import/mapping.</li>
+      </ul>
+      <p class="muted">Disclaimer: This add-on does <em>not</em> submit ENS to EU Customs; use carrier portals/approved systems for filing.</p>
+    </section>
+
+    <section class="card" id="faq">
+      <h2>FAQ</h2>
+      <h3>Does this file declarations to customs?</h3>
+      <p>No. It prepares and validates ENS data. You submit via your own portals/systems.</p>
+
+      <h3>Why do I see a permissions prompt?</h3>
+      <p>Google requires user consent for each scope the add-on needs to function (see “Permissions explained”).</p>
+
+      <h3>Where are files saved?</h3>
+      <p>Exports are saved to your Google Drive. You can move them to any folder after export.</p>
+    </section>
+
+    <section class="card" id="troubleshooting">
+      <h2>Troubleshooting</h2>
+      <h3>“Insufficient permission to call Drive”</h3>
+      <p>Ensure you granted <code>drive.file</code>. If you changed scopes, reinstall the test deployment and re-authorize.</p>
+
+      <h3>Buttons don’t appear</h3>
+      <p>Refresh the Sheet, then open the right-side <strong>Puzzle</strong> icon → <em>ICS2 ENS Builder</em>. Make sure you installed the latest deployment.</p>
+
+      <h3>XML contains strange characters</h3>
+      <p>The add-on escapes special characters and pretty-prints output. If you pasted raw HTML into fields, remove any unescaped <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>.</p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contact support</h2>
+      <p>Email us at <a href="mailto:support@your-domain.example">support@your-domain.example</a>. Include:</p>
+      <ul>
+        <li>Your Google account email</li>
+        <li>Steps to reproduce</li>
+        <li>Screenshots of the sheet and the error message</li>
+        <li>Whether the error occurs on CSV or XML export (or both)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> Your Company. · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
