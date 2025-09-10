@@ -1,4 +1,4 @@
-<!-- File: support.html (no direct email address) -->
+<!-- File: support.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,66 +6,72 @@
   <title>Support · ICS2 ENS Builder for Google Sheets</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Get support for ICS2 ENS Builder for Google Sheets." />
-  <link rel="canonical" href="https://ensworks.com/support" />
+  <link rel="canonical" href="https://your-domain.example/support" />
   <meta property="og:title" content="Support · ICS2 ENS Builder" />
-  <meta property="og:description" content="Submit a support request and find help resources." />
+  <meta property="og:description" content="Contact support and get help." />
   <style>
     :root{--fg:#111;--muted:#666;--brand:#0B57D0;--card:#fafafa}
     body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg)}
-    main{max-width:980px;margin:0 auto;padding:40px 20px}
+    main{max-width:880px;margin:0 auto;padding:40px 20px}
     h1{font-size:32px;margin:0 0 8px}
     h2{font-size:20px;margin:28px 0 8px}
     p,li{color:#222}
     .card{background:var(--card);border:1px solid #eee;border-radius:12px;padding:18px}
     .row{display:grid;gap:16px}
-    @media(min-width:900px){.row{grid-template-columns:2fr 1fr}}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    @media(min-width:800px){.row{grid-template-columns:1fr 1fr}}
+    label{display:block;margin:10px 0 6px}
+    input,textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font:inherit}
+    button{background:var(--brand);color:#fff;border:0;padding:10px 14px;border-radius:10px;cursor:pointer}
     small{color:var(--muted)}
-    footer{margin-top:32px;color:#666}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <main>
     <h1>Support</h1>
-    <p>Submit a request using the form below. We’ll respond to the contact details you provide in the form.</p>
+    <p>Need help? Email us or send a request using the form below.</p>
 
     <div class="row">
-      <!-- Request Form (embed your Google Form or ticket system here) -->
       <section class="card">
-        <h2>Request form</h2>
-        <!-- Replace FORM_EMBED_SRC with your Google Form's embed URL
-             Google Forms: Send → Embed <> → copy the src attribute -->
-        <iframe
-          src="FORM_EMBED_SRC"
-          width="100%"
-          height="900"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="Support request form">
-          Loading…
-        </iframe>
-        <small>
-          Tip: Include steps to reproduce, screenshots, and whether the issue occurs on CSV or XML export.
-        </small>
+        <h2>Email</h2>
+        <p><a href="mailto:support@your-domain.example">support@your-domain.example</a></p>
+        <p><strong>Response time:</strong> 1–2 business days</p>
+        <p><strong>Hours:</strong> Mon–Fri, 09:00–18:00 (local time)</p>
+        <h3>Include in your message</h3>
+        <ul>
+          <li>Your Google account email</li>
+          <li>Steps to reproduce</li>
+          <li>Screenshots (error + sheet)</li>
+          <li>Export type (CSV/XML) and file link if possible</li>
+        </ul>
       </section>
 
-      <!-- Help resources / Status -->
-      <aside class="card">
-        <h2>Help resources</h2>
-        <ul>
-          <li><a href="https://ensworks.com/help">Help Center</a></li>
-          <li><a href="https://ensworks.com/privacy">Privacy Policy</a></li>
-          <li><a href="https://ensworks.com/terms">Terms of Service</a></li>
-        </ul>
+      <section class="card">
+        <h2>Request form</h2>
+        <!-- Mailto fallback: prefill subject & body; replace action with your ticket system if available -->
+        <form method="get" action="mailto:support@your-domain.example">
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
-        <h2 style="margin-top:20px">Status</h2>
-        <p>All systems operational.</p>
-        <small>For incidents, updates will be posted on this page.</small>
-      </aside>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Issue summary" required />
+
+          <label for="details">Details</label>
+          <textarea id="details" name="body" rows="6" placeholder="Steps to reproduce, screenshots links, CSV/XML type..."></textarea>
+
+          <p><button type="submit">Send</button></p>
+          <small>By sending, you consent to be contacted about this request.</small>
+        </form>
+      </section>
     </div>
 
-    <footer>
+    <section class="card" style="margin-top:16px">
+      <h2>Status</h2>
+      <p>All systems operational.</p>
+      <small>For outages, we’ll post updates here.</small>
+    </section>
+
+    <footer style="margin-top:32px;color:#666">
       © <span id="y"></span> Your Company · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
     </footer>
   </main>
