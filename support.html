@@ -1,4 +1,4 @@
-<!-- File: support.html (no email; uses embedded Google Form) -->
+<!-- File: support.html (no direct email address) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,71 +8,67 @@
   <meta name="description" content="Get support for ICS2 ENS Builder for Google Sheets." />
   <link rel="canonical" href="https://your-domain.example/support" />
   <meta property="og:title" content="Support · ICS2 ENS Builder" />
-  <meta property="og:description" content="Contact support and get help." />
+  <meta property="og:description" content="Submit a support request and find help resources." />
   <style>
     :root{--fg:#111;--muted:#666;--brand:#0B57D0;--card:#fafafa}
     body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg)}
-    main{max-width:880px;margin:0 auto;padding:40px 20px}
+    main{max-width:980px;margin:0 auto;padding:40px 20px}
     h1{font-size:32px;margin:0 0 8px}
     h2{font-size:20px;margin:28px 0 8px}
     p,li{color:#222}
     .card{background:var(--card);border:1px solid #eee;border-radius:12px;padding:18px}
+    .row{display:grid;gap:16px}
+    @media(min-width:900px){.row{grid-template-columns:2fr 1fr}}
     a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px}
+    small{color:var(--muted)}
     footer{margin-top:32px;color:#666}
-    .iframe-wrap{position:relative;width:100%}
-    .iframe-wrap iframe{width:100%;height:900px;border:0;border-radius:12px;background:#fff}
-    .note{color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
   <main>
     <h1>Support</h1>
-    <p>Use the request form below. We’ll reply to the email you provide in the form.</p>
+    <p>Submit a request using the form below. We’ll respond to the contact details you provide in the form.</p>
 
-    <section class="card">
-      <h2>Request form</h2>
-      <!-- Replace FORM_EMBED_SRC with your Google Form's Embed URL:
-           Google Form → Send → <> Embed HTML → Copy iframe src -->
-      <div class="iframe-wrap" role="region" aria-label="Support request form">
+    <div class="row">
+      <!-- Request Form (embed your Google Form or ticket system here) -->
+      <section class="card">
+        <h2>Request form</h2>
+        <!-- Replace FORM_EMBED_SRC with your Google Form's embed URL
+             Google Forms: Send → Embed <> → copy the src attribute -->
         <iframe
-          title="Support Request Form"
           src="FORM_EMBED_SRC"
-          allow="clipboard-write"
-          loading="lazy">
+          width="100%"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Support request form">
+          Loading…
         </iframe>
-      </div>
-      <p class="note">
-        If the form fails to load, open it directly:
-        <a id="form-link" href="FORM_PUBLIC_LINK" rel="noopener" target="_blank">Open support form</a>.
-      </p>
-      <noscript>
-        <p>Please enable JavaScript or use this link:
-          <a href="FORM_PUBLIC_LINK" rel="noopener" target="_blank">Open support form</a>.
-        </p>
-      </noscript>
-    </section>
+        <small>
+          Tip: Include steps to reproduce, screenshots, and whether the issue occurs on CSV or XML export.
+        </small>
+      </section>
 
-    <section class="card" style="margin-top:16px">
-      <h2>Status</h2>
-      <p>All systems operational.</p>
-      <p class="note">For outages, we’ll post updates here.</p>
-    </section>
+      <!-- Help resources / Status -->
+      <aside class="card">
+        <h2>Help resources</h2>
+        <ul>
+          <li><a href="https://your-domain.example/help">Help Center</a></li>
+          <li><a href="https://your-domain.example/privacy">Privacy Policy</a></li>
+          <li><a href="https://your-domain.example/terms">Terms of Service</a></li>
+        </ul>
+
+        <h2 style="margin-top:20px">Status</h2>
+        <p>All systems operational.</p>
+        <small>For incidents, updates will be posted on this page.</small>
+      </aside>
+    </div>
 
     <footer>
       © <span id="y"></span> Your Company · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
     </footer>
   </main>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    // If you only set FORM_EMBED_SRC, auto-fill the fallback link:
-    (function () {
-      var i = document.querySelector('iframe[src^="http"]');
-      var a = document.getElementById('form-link');
-      if (i && a && (!a.getAttribute('href') || a.getAttribute('href') === 'FORM_PUBLIC_LINK')) {
-        a.setAttribute('href', i.getAttribute('src'));
-      }
-    })();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
