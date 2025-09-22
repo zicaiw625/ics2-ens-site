@@ -3,107 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <title>Privacy Policy – ICS EU ENS HS6 Add-on</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy Policy for the ICS2 Basic Google Sheets Editor Add-on." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Privacy Policy for the ICS EU ENS HS6 Add-on (Google Sheets). Discloses data access, use, storage, sharing, and data protection mechanisms." />
   <style>
-    :root{--fg:#0f172a;--muted:#475569;--bd:#e2e8f0;--bg:#ffffff;--accent:#0ea5e9;}
-    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    .wrap{max-width:820px;margin:0 auto;padding:32px 20px;}
-    h1{font-size:28px;margin:0 0 8px;}
-    h2{font-size:20px;margin:28px 0 8px;border-bottom:1px solid var(--bd);padding-bottom:6px;}
-    p,li{color:var(--fg);}
-    small,.muted{color:var(--muted);}
-    ul{margin:10px 0 16px 22px;}
-    code{background:#f1f5f9;padding:2px 6px;border-radius:6px;}
-    .meta{margin:6px 0 24px;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .box{border:1px solid var(--bd);border-radius:12px;padding:14px;margin:12px 0;}
+    :root{--fg:#0f172a;--muted:#475569;--bd:#e2e8f0;--bg:#ffffff;--accent:#0ea5e9}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .wrap{max-width:880px;margin:0 auto;padding:32px 18px}
+    h1{margin:0 0 6px;font-size:28px} h2{margin:26px 0 8px;font-size:20px;border-bottom:1px solid var(--bd);padding-bottom:6px}
+    p{margin:10px 0} ul{margin:8px 0 16px 20px} small,.muted{color:var(--muted)} code{background:#f1f5f9;padding:2px 6px;border-radius:6px}
+    .box{border:1px solid var(--bd);border-radius:12px;padding:14px;margin:12px 0;background:#fff}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <main class="wrap">
     <h1>Privacy Policy</h1>
-    <div class="meta">
-      <div><strong>Product:</strong> ICS EU ENS HS6 Add-on</div>
-      <div><strong>Controller:</strong> <span id="company-name">ensworks</span></div>
-      <div><strong>Effective date:</strong> <span id="effective-date">2025-09-21</span></div>
-    </div>
+    <p class="muted">
+      Product: <strong>ICS EU ENS HS6 Add-on</strong> (Google Sheets) · Controller: <strong>ensworks</strong> · Effective date: <strong>2025-09-22</strong>
+    </p>
 
-    <h2>1. Overview</h2>
-    <p>This policy explains what data the add-on accesses, why, how it is used, and your choices.</p>
+    <h2>1) What this policy covers</h2>
+    <p>This policy explains what Google user data the add-on accesses, why, how it is used, how it is protected, how long it is retained, and your choices.</p>
 
-    <h2>2. Scope</h2>
-    <p>This policy covers the ICS EU ENS HS6 Add-on used inside Google Sheets. It does not cover third-party sites linked from our website.</p>
-
-    <h2>3. Google User Data We Access</h2>
+    <h2>2) Google user data we access</h2>
     <div class="box">
       <p><strong>OAuth scopes requested</strong></p>
       <ul>
-        <li><code>https://www.googleapis.com/auth/script.container.ui</code> – to display and run HtmlService sidebars and dialogs within Google Sheets.</li>
-        <li><code>https://www.googleapis.com/auth/spreadsheets.currentonly</code> – to read/write <em>only</em> the spreadsheet where the add-on is installed.</li>
+        <li><code>https://www.googleapis.com/auth/spreadsheets.currentonly</code> – read/write <em>only</em> the spreadsheet where the add-on is installed (create templates, validations, logs, exports).</li>
+        <li><code>https://www.googleapis.com/auth/script.container.ui</code> – display/run HtmlService sidebar and dialogs within Google Sheets.</li>
       </ul>
-      <p><strong>Categories of data (current spreadsheet only)</strong></p>
+      <p><strong>Data categories (current spreadsheet only)</strong></p>
       <ul>
-        <li>Sheet names, headers, cell values you provide, data validation/formatting.</li>
-        <li>Add-on output written to the same file (e.g., <code>ICS2_Master</code>, <code>ICS2_House</code>, <code>ICS2_ValidationLog</code>, <code>ICS2_Score</code>).</li>
+        <li>Sheet names, headers, and cell values you provide; data validation/formatting; add-on outputs (e.g., <code>ICS2_Master</code>, <code>ICS2_House</code>, <code>ICS2_ValidationLog</code>, <code>ICS2_Score</code>).</li>
       </ul>
-      <p><strong>We do not access</strong>: other Drive files, Gmail, Contacts, Calendar, or any external accounts.</p>
+      <p><strong>We do not access</strong>: other Drive files, Gmail, Contacts, Calendar, or external accounts.</p>
     </div>
 
-    <h2>4. How We Use the Data</h2>
+    <h2>3) How we use the data</h2>
     <ul>
-      <li>Create templates and validations in the current spreadsheet.</li>
-      <li>Run on-sheet checks and write results to a log/score sheet in the same file.</li>
-      <li>Generate CSV for download in your browser when you click export.</li>
-      <li>No transmission to our servers; no advertising or profiling.</li>
+      <li>Create ENS-ready templates and apply validation rules in the same file.</li>
+      <li>Run in-sheet checks and write results (log/score) to the same file.</li>
+      <li>Generate CSV for download in your browser when you click Export.</li>
+    </ul>
+    <p><strong>No transmission to developer servers.</strong> We don’t sell or use data for advertising or profiling.</p>
+
+    <h2>4) Data protection for sensitive data</h2>
+    <p>ENS data can include names, addresses, identifiers, and logistics details. We apply the following technical and organizational measures to protect such data:</p>
+    <ul>
+      <li><strong>Encryption in transit & at rest</strong>: Files in Google Drive/Sheets are encrypted in transit and at rest by Google by default; organizations may enable Client-side Encryption (CSE) for additional confidentiality. <a href="https://support.google.com/drive/answer/10519333" target="_blank" rel="noopener">Learn more</a> · <a href="https://cloud.google.com/docs/security/encryption/default-encryption" target="_blank" rel="noopener">Default encryption</a> · <a href="https://support.google.com/a/answer/10741897" target="_blank" rel="noopener">About CSE</a>.</li>
+      <li><strong>Least-privilege access</strong>: We use the narrow <code>currentonly</code> scope and <code>@OnlyCurrentDoc</code> so the add-on can only access the active spreadsheet; no access to other files. <a href="https://developers.google.com/apps-script/concepts/scopes" target="_blank" rel="noopener">Scopes guidance</a>.</li>
+      <li><strong>Data minimization</strong>: Processing occurs only on user-provided fields required for ENS preparation; we do not collect analytics or telemetry on spreadsheet contents.</li>
+      <li><strong>No backend storage</strong>: We do not persist spreadsheet contents on developer or third-party servers; outputs remain in your file.</li>
+      <li><strong>Logging hygiene</strong>: Errors and operational messages exclude spreadsheet contents; if users send support logs/screenshots, they must redact sensitive values.</li>
+      <li><strong>Access controls</strong>: The add-on runs under the installing user’s Google account; sharing and permissions are controlled by the file owner’s Drive sharing settings.</li>
+      <li><strong>Secure transport</strong>: OAuth and add-on UI communications use Google’s HTTPS/TLS infrastructure.</li>
+      <li><strong>Incident response</strong>: If we become aware of a security incident affecting data we process, we will investigate, mitigate, and notify affected administrators/users without undue delay, consistent with applicable law and our contracts.</li>
     </ul>
 
-    <h2>5. Processing, Storage, and Retention</h2>
+    <h2>5) Retention & deletion</h2>
     <ul>
-      <li>Processing occurs within Google Apps Script and your browser.</li>
-      <li>We do not store spreadsheet data on developer or third-party servers.</li>
-      <li>All outputs remain in your spreadsheet. You control retention by editing or deleting those sheets.</li>
+      <li>We do not store Google user data on developer systems.</li>
+      <li>All outputs remain in your spreadsheet; you control retention by editing or deleting the <code>ICS2_*</code> sheets or the entire file.</li>
+      <li>Uninstalling the add-on or revoking access stops further processing.</li>
     </ul>
 
-    <h2>6. Sharing and Disclosure</h2>
+    <h2>6) Sharing & sub-processors</h2>
     <ul>
-      <li>We do not sell or share Google user data with third parties.</li>
-      <li>Data may be disclosed only if required by law.</li>
+      <li>No sale or sharing of Google user data with third parties.</li>
+      <li>No sub-processors handle spreadsheet contents for this add-on.</li>
+      <li>We may disclose information only if required by law.</li>
     </ul>
 
-    <h2>7. Security</h2>
-    <ul>
-      <li>Least-privilege design: <code>currentonly</code> scope and <code>@OnlyCurrentDoc</code> limit access to the open file.</li>
-      <li>Transport security provided by Google’s infrastructure.</li>
-      <li>No custom external data stores or telemetry are used.</li>
-    </ul>
-
-    <h2>8. Your Choices</h2>
+    <h2>7) Your choices</h2>
     <ul>
       <li>Uninstall via <em>Extensions → Add-ons → Manage add-ons</em>.</li>
-      <li>Revoke access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
-      <li>Delete any <code>ICS2_*</code> sheets or the entire spreadsheet to remove add-on outputs.</li>
+      <li>Revoke OAuth access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
+      <li>Control file access via Google Drive sharing and, if needed, enable Workspace Client-side Encryption.</li>
     </ul>
 
-    <h2>9. Children</h2>
-    <p>The add-on is not directed to children under 13 and does not knowingly collect personal data from them.</p>
+    <h2>8) Compliance statements</h2>
+    <p>Our use of Google user data complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a> (including Limited Use) and applicable <a href="https://developers.google.com/workspace/marketplace/terms/policies" target="_blank" rel="noopener">Workspace Marketplace policies</a>. This policy and in-product notices disclose how we access, use, store, and share Google user data.</p>
 
-    <h2>10. International Transfers</h2>
-    <p>No developer-hosted transfers occur. If this changes, we will update this policy before enabling such features.</p>
+    <h2>9) Children</h2>
+    <p>The add-on is not directed to children under 13 and does not knowingly collect their personal data.</p>
 
-    <h2>11. Sub-processors</h2>
-    <p>None. The add-on does not use third-party processors for your Google user data.</p>
-
-    <h2>12. Changes to This Policy</h2>
-    <p>We may update this policy. The “Effective date” will reflect the latest version.</p>
-
-    <h2>13. Contact</h2>
+    <h2>10) Contact</h2>
     <p>
-      Email: <a href="mailto:support@ensworks.com">support@ensworks.com</a><br />
+      Email: <a href="mailto:support@ensworks.com">support@ensworks.com</a>
     </p>
-
-    <p class="muted">If any translation differs from the English version, the English version controls.</p>
   </main>
 </body>
 </html>
